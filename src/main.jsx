@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { PorfolioApp } from "./PorfolioApp";
 import { VariablesApp } from "./VariablesApp";
 import { FragmentApp } from "./FragmentApp";
+import { StylesApp } from "./StylesApp";
 import ClassComponent from "./ClassComponent";
 
 createRoot(document.getElementById("root")).render(
@@ -11,5 +12,6 @@ createRoot(document.getElementById("root")).render(
     <ClassComponent />
     <VariablesApp />
     <FragmentApp />
+    <StylesApp />
   </StrictMode>,
 );
