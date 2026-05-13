@@ -4,14 +4,22 @@ import { PorfolioApp } from "./PorfolioApp";
 import { VariablesApp } from "./VariablesApp";
 import { FragmentApp } from "./FragmentApp";
 import { StylesApp } from "./StylesApp";
+import { PropsApp } from "./PropsApp";
 import ClassComponent from "./ClassComponent";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <PorfolioApp />
+    {/* <PorfolioApp />
     <ClassComponent />
     <VariablesApp />
     <FragmentApp />
-    <StylesApp />
+    <StylesApp /> */}
+    <PropsApp
+      string={'prop string'}
+      numero={5}
+      arreglo={[1, 2, 3]}
+      object={{nombre: 'Jorge', apellido: 'Mendez'}}
+      date={new Date()}
+    />
   </StrictMode>,
 );
