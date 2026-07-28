@@ -1,19 +1,22 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+const Button = ({title = 'boton'}) =>{
+  return <button>{title}</button>
+} 
 
-const string = "Hola Mundo comillas simples";
-const string2 = "Hola Mundo comillas dobles";
-const string3 = `Hola Mundo template strings con la variable string: ${string}`;
-const number = 42;
-const decimal = 3.14;
-const array = ["HTML", "CSS", "JavaScript", "React"];
-const boolean = true;
-const foo = () => "return de una función";
-const object = { name: "Juan", age: 30, city: "Madrid" };
-const set = new Set([1, 2, 3, 4]);
-const date = new Date();
+// const string = "Hola Mundo comillas simples";
+// const string2 = "Hola Mundo comillas dobles";
+// const string3 = `Hola Mundo template strings con la variable string: ${string}`;
+// const number = 42;
+// const decimal = 3.14;
+// const array = ["HTML", "CSS", "JavaScript", "React"];
+// const boolean = true;
+// const foo = () => "return de una función";
+// const object = { name: "Juan", age: 30, city: "Madrid" };
+// const set = new Set([1, 2, 3, 4]);
+// const date = new Date();
 
 export const VariablesApp = ({ titulo, subtitulo }) => {
-  return (
+  {/* return (
     <div>
       <h1>{titulo}</h1>
       <h3>{subtitulo}</h3>
@@ -27,17 +30,23 @@ export const VariablesApp = ({ titulo, subtitulo }) => {
       <p>- foo: {foo()}</p>
       <p>- object: {JSON.stringify(object)}</p>
       <p>- set: {set}</p>
-      <p>- date: {JSON.stringify(date)}</p>
+      <p>- date: {JSON.stringify(date)}</p> 
     </div>
+
+  );*/}
+  return (
+    <>
+      <Button />
+    </>
   );
 };
 
-VariablesApp.propTypes = {
-  titulo: PropTypes.string.isRequired,
-  subtitulo: PropTypes.string.isRequired,
-};
+// VariablesApp.propTypes = {
+//   titulo: PropTypes.string.isRequired,
+//   subtitulo: PropTypes.string.isRequired,
+// };
 
-VariablesApp.defaultProps = {
-  titulo: 'TITULO POR DEFAULT',
-  subtitulo: 'SUBTITULO POR DEFAULT',
-}
+// VariablesApp.defaultProps = {
+//   titulo: 'TITULO POR DEFAULT',
+//   subtitulo: 'SUBTITULO POR DEFAULT',
+// }
