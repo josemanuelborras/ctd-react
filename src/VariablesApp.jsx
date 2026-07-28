@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const string = "Hola Mundo comillas simples";
 const string2 = "Hola Mundo comillas dobles";
 const string3 = `Hola Mundo template strings con la variable string: ${string}`;
@@ -10,9 +12,11 @@ const object = { name: "Juan", age: 30, city: "Madrid" };
 const set = new Set([1, 2, 3, 4]);
 const date = new Date();
 
-export const VariablesApp = () => {
+export const VariablesApp = ({ titulo, subtitulo }) => {
   return (
     <div>
+      <h1>{titulo}</h1>
+      <h3>{subtitulo}</h3>
       <p>- string: {string}</p>
       <p>- string2: {string2}</p>
       <p>- string3: {string3}</p>
@@ -27,3 +31,13 @@ export const VariablesApp = () => {
     </div>
   );
 };
+
+VariablesApp.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  subtitulo: PropTypes.string.isRequired,
+};
+
+VariablesApp.defaultProps = {
+  titulo: 'TITULO POR DEFAULT',
+  subtitulo: 'SUBTITULO POR DEFAULT',
+}

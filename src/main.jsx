@@ -14,12 +14,13 @@ createRoot(document.getElementById("root")).render(
     <VariablesApp />
     <FragmentApp />
     <StylesApp /> */}
-    <PropsApp
+    {/* <PropsApp
       string={'prop string'}
       numero={5}
       arreglo={[1, 2, 3]}
       object={{nombre: 'Jorge', apellido: 'Mendez'}}
       date={new Date()}
-    />
+    /> */}
+    <VariablesApp titulo='TITULO' subtitulo='SUBTITULO'/>
   </StrictMode>,
 );
