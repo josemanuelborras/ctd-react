@@ -7,6 +7,8 @@ import { StylesApp } from "./StylesApp";
 import { PropsApp } from "./PropsApp";
 import ClassComponent from "./ClassComponent";
 
+import { ContadorApp } from "./ContadorApp";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <PorfolioApp />
@@ -21,6 +23,7 @@ createRoot(document.getElementById("root")).render(
       object={{nombre: 'Jorge', apellido: 'Mendez'}}
       date={new Date()}
     /> */}
-    <VariablesApp titulo='TITULO' subtitulo='SUBTITULO'/>
+    {/* <VariablesApp titulo='TITULO' subtitulo='SUBTITULO'/> */}
+    <ContadorApp init={0} />
   </StrictMode>,
 );
