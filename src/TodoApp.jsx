@@ -1,20 +1,23 @@
+import {useState} from "react";
+
 const Item = ({ name, isDone }) => {
   return (
     <li>
-      {name} - {isDone ? "👌" : "🚫"} - {isDone && "Hecho"}
+      {name} - {isDone ? "👌" : "🚫"}
     </li>
   );
 };
 
-export const TodoApp = ({ cantidad }) => {
+export const TodoApp = ({ arrayObjetos }) => {
+
+  const [array, setArray] = useState(arrayObjetos)
+
   return (
     <>
-      {cantidad > 0 && <p>Hay {cantidad} tareas pendientes</p>}
+      {array.length > 0 && <p>Hay {array.length} tareas pendientes</p>}
       <ul>
-        <Item name={"Maquetacion Web"} isDone={true} />
-        <Item name={"Progeamacion Imperativa"} isDone={true} />
-        <Item name={"Javascript"} isDone={true} />
-        <Item name={"React"} isDone={false} />
+        {array.map(item => <Item key={item.id} name={item.name} isDone={item.isDone} />)}
+        
       </ul>
     </>
   );
