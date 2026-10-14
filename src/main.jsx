@@ -9,6 +9,10 @@ import ClassComponent from "./ClassComponent";
 
 import { ContadorApp } from "./ContadorApp";
 
+import { DashboardApp } from "./DashboardApp"
+
+import { TodoApp } from "./TodoApp"
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <PorfolioApp />
@@ -24,6 +28,8 @@ createRoot(document.getElementById("root")).render(
       date={new Date()}
     /> */}
     {/* <VariablesApp titulo='TITULO' subtitulo='SUBTITULO'/> */}
-    <ContadorApp init={0} />
+    {/* <ContadorApp init={0} /> */}
+    {/* <DashboardApp isLogged={false}/> */}
+    <TodoApp cantidad={0}/>
   </StrictMode>,
 );
