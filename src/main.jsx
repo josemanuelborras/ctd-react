@@ -13,15 +13,7 @@ import { DashboardApp } from "./DashboardApp"
 
 import { TodoApp } from "./TodoApp"
 
-const arrayObjetos = [
-    {id: 1, name: 'Introduccion a React', isDone: false},
-    {id: 2, name: 'Javascript', isDone: true},
-    {id: 3, name: 'Html', isDone: true},
-    {id: 4, name: 'Css', isDone: true},
-    {id: 5, name: 'Programacion imperativa', isDone: true},
-    {id: 6, name: 'Fragment', isDone: true},
-    {id: 7, name: 'jsx', isDone: true},
-  ]
+import { ArraysApp } from "./ArraysApp";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -40,6 +32,7 @@ createRoot(document.getElementById("root")).render(
     {/* <VariablesApp titulo='TITULO' subtitulo='SUBTITULO'/> */}
     {/* <ContadorApp init={0} /> */}
     {/* <DashboardApp isLogged={false}/> */}
-    <TodoApp arrayObjetos={arrayObjetos}/>
+    {/* <TodoApp arrayObjetos={arrayObjetos}/> */}
+    <ArraysApp />
   </StrictMode>,
 );
