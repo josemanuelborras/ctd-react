@@ -9,12 +9,9 @@ export const AddTask = ({ addTask }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newTask = {
-        name: inputValue,
-        isDone: false
-    }
-    console.log(event);
-    addTask(tasks => [...tasks, newTask]);
+    if(inputValue === "") return;
+    addTask(inputValue);
+    setInputValue('');
   };
 
   return (
@@ -23,7 +20,7 @@ export const AddTask = ({ addTask }) => {
         <input
           type="text"
           placeholder="Agregar una tarea"
-          valu={inputValue}
+          value={inputValue}
           onChange={onInputChange}
         />
       </form>

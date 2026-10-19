@@ -1,7 +1,7 @@
-export const Task = ({ name, isDone }) => {
+export const Task = ({ id, name, isDone }) => {
   return (
     <li>
-      {name} - {isDone ? "👌" : "🚫"}
+      {id}. {name} - {isDone ? "👌" : "🚫"}
     </li>
   );
 };
