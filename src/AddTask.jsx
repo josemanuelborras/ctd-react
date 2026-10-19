@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddTask = () => {
+export const AddTask = ({ addTask }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (event) => {
@@ -9,7 +9,12 @@ export const AddTask = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const newTask = {
+        name: inputValue,
+        isDone: false
+    }
     console.log(event);
+    addTask(tasks => [...tasks, newTask]);
   };
 
   return (
