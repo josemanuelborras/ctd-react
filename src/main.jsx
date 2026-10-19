@@ -11,7 +11,7 @@ import { ContadorApp } from "./ContadorApp";
 
 import { DashboardApp } from "./DashboardApp"
 
-import { TodoApp } from "./TodoApp"
+import { TodoApp } from "./pages/TodoApp"
 
 import { ArraysApp } from "./ArraysApp";
 
@@ -33,6 +33,6 @@ createRoot(document.getElementById("root")).render(
     {/* <ContadorApp init={0} /> */}
     {/* <DashboardApp isLogged={false}/> */}
     {/* <TodoApp arrayObjetos={arrayObjetos}/> */}
-    <ArraysApp />
+    <TodoApp />
   </StrictMode>,
 );
