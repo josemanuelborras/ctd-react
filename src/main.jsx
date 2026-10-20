@@ -15,6 +15,8 @@ import { TodoApp } from "./pages/TodoApp"
 
 import { ArraysApp } from "./ArraysApp";
 
+import { UserApp } from "./pages/users/UserApp";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <PorfolioApp />
@@ -33,6 +35,7 @@ createRoot(document.getElementById("root")).render(
     {/* <ContadorApp init={0} /> */}
     {/* <DashboardApp isLogged={false}/> */}
     {/* <TodoApp arrayObjetos={arrayObjetos}/> */}
-    <TodoApp />
+    {/* <TodoApp /> */}
+    <UserApp />
   </StrictMode>,
 );
