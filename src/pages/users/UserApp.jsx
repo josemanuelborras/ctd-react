@@ -1,22 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import FetchList from "./components/FetchList";
 
-const baseUrl = "https://jsonplaceholder.typicode.com/users";
 
 export const UserApp = () => {
-  const [users, setUsers] = useState([]);
+  const [endpoint, setEndpoint] = useState('users')
 
-  const fetchUsers = async () => {
-    try {
-      const res = await fetch(baseUrl);
-      const data = await res.json();
-      console.log(data);
-      setUsers(data);
-    } catch (error) {
-      console.error(error);
-    }
-
-  };
-  // fetchUsers();
-
-  return <div>UserApp</div>;
+  return (
+    <>
+      <h1>Listado:</h1>
+      <FetchList endpoint={endpoint}/>
+      <button onClick={() => setEndpoint('comments')}>Cambiar endpoint</button>
+    </>
+  );
 };
