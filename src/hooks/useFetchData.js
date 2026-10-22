@@ -1,25 +1,28 @@
 import { useState, useEffect } from 'react';
+import { fetchData } from '../helpers/fetchData';
 
 export const useFetchData = ({endpoint}) => {
-  const baseUrl = `https://jsonplaceholder.typicode.com/${endpoint}`;
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchData = async () => {
-    try {
-      const res = await fetch(baseUrl);
-      const data = await res.json();
-      setData(data);
-    } catch (error) {
-      console.error(error);
-    } finally {
-        setIsLoading(false);
-    }
-  };
+  const getData = async () => {
+    const { data, isLoading } = await fetchData({endpoint});
+    setData(data);
+    setIsLoading(isLoading);
+  }
 
   useEffect(() => {
-    fetchData();
+    // Asincronismo en useEffect: 1. Promesas
+    // fetchData({endpoint})
+    // .then(res => {
+    //     setData(res.data)
+    //     setIsLoading(res.isLoading)
+    // });
+
+    // Asincronismo en useEffect: 2. Metodo asincrono
+    getData();
+
   }, [endpoint]);
 
   return {

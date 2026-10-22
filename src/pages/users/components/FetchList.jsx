@@ -6,7 +6,7 @@ const FetchList = ({ endpoint }) => {
   return (
     <>
       <ul>
-        {isLoading ? (
+        {isLoading && data ? (
           <p>Cargando...</p>
         ) : endpoint == "users" ? (
           data.map((item) => <li key={item.id}>{item.name}</li>)
